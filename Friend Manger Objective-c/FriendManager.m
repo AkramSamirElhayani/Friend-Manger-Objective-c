@@ -14,7 +14,7 @@
 
 -(void) DeleteAll
 {
-    system("cls");
+    system("clear");
     //  printf("\n================================================");
     int deletedEmp = 0 ;
     char answer  = '-';
@@ -265,30 +265,34 @@
 }
 -(void) PrintAll
 {
-    printf("\n================================================");
+    system("clear");
+    printf("=============================================================\n");
+    printf("|I |ID|Name         |Age|Phone        |Email                |\n");
+    printf("=============================================================");
+ 
     int printedf = 0 ;
     for(int i = 0 ; i<arrSize ; i++)
     {
         
         if( [arr objectAtIndex:i].fid >0)
         {
+            if(printedf>0)
+                printf("\n---+--+-------------+---+-------------+----------------------");
             [self PrintFriend: [arr objectAtIndex:i] :i];
             printedf++;
         }
-        
     }
     if(printedf == 0 )
     {
-        printf("\n================No Data ! ===============================");
+        printf("                           No Data !                           ");
+        printf("===============================================================");
     }
     else
     {
-        
-        printf("\n================End Of Data , Total :%i==================",printedf);
-        
+        printf("\n=============================================================");
+        printf("\n==========================Count:%i============================",printedf);
+       
     }
-    
-    
     printf("\nPress any Key to get to main menu : ");
     fflush(stdin);
     getc(stdin);
@@ -296,19 +300,19 @@
 
 -(void) PrintFriend:(Friend*)emp :(int) index
 {
-    
-    //    NSLog(@"\nFrind %i => Id:%i , Name:%@ , Age:%i , Phone:%@ , Email:%@ ",index,emp.fid,emp.name,emp.age,emp.phone,emp.phone);
-    //
-    printf("\nFriend %i => Id:%i , Name:%s , Age:%i , Phone:%s , Email:%s"
-           ,index
-           ,emp.fid
-           ,[emp.name cStringUsingEncoding:NSASCIIStringEncoding]
-           ,emp.age
-           ,[emp.phone cStringUsingEncoding:NSASCIIStringEncoding]
-           ,[emp.phone cStringUsingEncoding:NSASCIIStringEncoding]
-           
-           
-           );
+    NSString *name = [emp.name stringByPaddingToLength:13 withString:@" " startingAtIndex:0];
+    NSString *phone = [emp.phone stringByPaddingToLength:13 withString:@" " startingAtIndex:0];
+    NSString *mail = [emp.email stringByPaddingToLength:21 withString:@" " startingAtIndex:0];
+    NSString *fid = [[@(emp.fid) stringValue] stringByPaddingToLength:2 withString:@" " startingAtIndex:0];
+    NSString *ind = [[@(index) stringValue] stringByPaddingToLength:2 withString:@" " startingAtIndex:0];
+    NSString *age = [[@(emp.age) stringValue] stringByPaddingToLength:3 withString:@" " startingAtIndex:0];
+    printf("\n|%s|%s|%s|%s|%s|%s|"
+           ,[ind cStringUsingEncoding:NSASCIIStringEncoding]
+           ,[fid cStringUsingEncoding:NSASCIIStringEncoding]
+           ,[name cStringUsingEncoding:NSASCIIStringEncoding]
+           ,[age cStringUsingEncoding:NSASCIIStringEncoding]
+           ,[phone cStringUsingEncoding:NSASCIIStringEncoding]
+           ,[mail cStringUsingEncoding:NSASCIIStringEncoding]   );
     
 }
 
