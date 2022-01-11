@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		32D80908278C73D30066A91F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D80907278C73D30066A91F /* main.m */; };
+		32D80910278C73EC0066A91F /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8090F278C73EC0066A91F /* Friend.m */; };
+		32D80913278C741A0066A91F /* FriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D80912278C741A0066A91F /* FriendManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		32D80904278C73D30066A91F /* Friend Manger Objective-c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Friend Manger Objective-c"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D80907278C73D30066A91F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32D8090E278C73EC0066A91F /* Friend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		32D8090F278C73EC0066A91F /* Friend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		32D80911278C741A0066A91F /* FriendManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendManager.h; sourceTree = "<group>"; };
+		32D80912278C741A0066A91F /* FriendManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				32D80907278C73D30066A91F /* main.m */,
+				32D8090E278C73EC0066A91F /* Friend.h */,
+				32D8090F278C73EC0066A91F /* Friend.m */,
+				32D80911278C741A0066A91F /* FriendManager.h */,
+				32D80912278C741A0066A91F /* FriendManager.m */,
 			);
 			path = "Friend Manger Objective-c";
 			sourceTree = "<group>";
@@ -119,7 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32D80913278C741A0066A91F /* FriendManager.m in Sources */,
 				32D80908278C73D30066A91F /* main.m in Sources */,
+				32D80910278C73EC0066A91F /* Friend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
